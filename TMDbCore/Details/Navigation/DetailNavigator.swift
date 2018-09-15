@@ -11,4 +11,5 @@ import Foundation
 protocol DetailNavigator {
 	func navigateToShow(withIdentifier identifier: Int64)
 	func navigateToMovie(withIdentifier identifier: Int64)
+    func navigateToPerson(withIdentifier identifier: Int64)
 }

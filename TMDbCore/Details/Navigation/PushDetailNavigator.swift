@@ -27,4 +27,9 @@ final class PushDetailNavigator: DetailNavigator {
 		let detailViewController = detailViewControllerProvider.movieViewController(withIdentifier: identifier)
 		navigationController.pushViewController(detailViewController, animated: true)
 	}
+    
+    func navigateToPerson(withIdentifier identifier: Int64){
+        let detailViewController = detailViewControllerProvider.personViewController(withIdentifier: identifier)
+        navigationController.pushViewController(detailViewController, animated: true)
+    }
 }

@@ -45,7 +45,7 @@ final class SearchResultsPresenter {
 		case .show(let show):
 			detailNavigator.navigateToShow(withIdentifier: show.identifier)
 		case .person(let person):
-			print("[Exercise] Navigate to person with identifier \(person.identifier)")
+            detailNavigator.navigateToPerson(withIdentifier: person.identifier)
 		}
 	}
 }
