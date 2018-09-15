@@ -10,15 +10,16 @@ import RxSwift
 
 final class MoviePresenter: DetailPresenter {
     private let repository: MovieRepositoryProtocol
-    
+    private let detailNavigator: DetailNavigator
     private let identifier: Int64
     private let disposeBag = DisposeBag()
     
     weak var view: DetailView?
     
-    init(repository: MovieRepositoryProtocol, identifier: Int64) {
+    init(repository: MovieRepositoryProtocol, identifier: Int64,detailNavigator:DetailNavigator) {
         self.repository = repository
         self.identifier = identifier
+        self.detailNavigator = detailNavigator
     }
     
     func didLoad() {
@@ -38,6 +39,7 @@ final class MoviePresenter: DetailPresenter {
     }
     
     func didSelect(item: PosterStripItem) {
+        detailNavigator.navigateToPerson(withIdentifier: item.identifier)
     }
     
     private func detailSections(for movie: MovieDetail) -> [DetailSection] {

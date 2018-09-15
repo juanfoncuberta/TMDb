@@ -33,7 +33,7 @@ final class DetailAssembly {
 	}
 
 	func moviePresenter(identifier: Int64) -> DetailPresenter {
-		return MoviePresenter(repository: movieRepository(), identifier: identifier)
+        return MoviePresenter(repository: movieRepository(), identifier: identifier,detailNavigator: pushDetailNavigator)
 	}
 
 	func personPresenter(identifier: Int64) -> DetailPresenter {
