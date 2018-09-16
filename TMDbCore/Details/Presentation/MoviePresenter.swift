@@ -27,6 +27,7 @@ final class MoviePresenter: DetailPresenter {
         
         repository.movie(withIdentifier: identifier)
             .map { [weak self] movie in
+                
                 self?.detailSections(for: movie) ?? []
             }
             .observeOn(MainScheduler.instance)

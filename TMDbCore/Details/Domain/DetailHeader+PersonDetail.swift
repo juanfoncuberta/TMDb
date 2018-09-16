@@ -14,7 +14,7 @@ extension DetailHeader {
 		metadata = [
 			person.birthday.map { "Born: \($0)" },
 			person.deathday.map { "Died: \($0)" }
-		].flatMap { $0 }.joined(separator: "\n")
+		].compactMap { $0 }.joined(separator: "\n")
 		posterPath = person.profilePath
 		backdropPath = person.taggedImages.results
 			.filter { $0.aspectRatio > 1.7 }

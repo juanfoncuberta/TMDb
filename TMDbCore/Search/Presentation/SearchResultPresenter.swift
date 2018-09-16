@@ -45,7 +45,7 @@ private extension SearchResultPresenter {
 		bindImage(at: show.posterPath, to: cell)
 
 		cell.headlineLabel.text = NSLocalizedString("TV SHOW", comment: "")
-		cell.titleLabel.text = show.title
+		cell.titleLabel.text = show.name
 
 		let metadata = (show.firstAirDate?.year).flatMap { String($0) } ?? ""
 		cell.metadataLabel.text = metadata
@@ -64,7 +64,7 @@ private extension SearchResultPresenter {
 				case .movie(let movie):
 					return (movie.title, movie.releaseDate)
 				case .show(let show):
-					return (show.title, show.firstAirDate)
+					return (show.name, show.firstAirDate)
 				}
 			}
 			.map { title, date in

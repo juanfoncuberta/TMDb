@@ -35,6 +35,10 @@ final class DetailAssembly {
 	func moviePresenter(identifier: Int64) -> DetailPresenter {
         return MoviePresenter(repository: movieRepository(), identifier: identifier,detailNavigator: pushDetailNavigator)
 	}
+    
+    func showPresenter(identifier: Int64) -> DetailPresenter {
+        return ShowPresenter(repository: showRepository(), identifier: identifier,detailNavigator: pushDetailNavigator)
+    }
 
 	func personPresenter(identifier: Int64) -> DetailPresenter {
 		return PersonPresenter(repository: personRepository(), identifier: identifier)
@@ -47,16 +51,21 @@ final class DetailAssembly {
 	func personRepository() -> PersonRepository {
 		return PersonRepository(webService: webServiceAssembly.webService)
 	}
+    
+    func showRepository() -> ShowRepositoryProtocol {
+        return ShowRepository(webService: webServiceAssembly.webService)
+    }
+
 }
 
 extension DetailAssembly: DetailViewControllerProvider {
 	// FIXME: Temporary!!
-	private class DummyDetailPresenter: DetailPresenter {
-		var view: DetailView?
-
-		func didLoad() {}
-		func didSelect(item: PosterStripItem) {}
-	}
+//    private class DummyDetailPresenter: DetailPresenter {
+//        var view: DetailView?
+//
+//        func didLoad() {}
+//        func didSelect(item: PosterStripItem) {}
+//    }
 
 	func movieViewController(withIdentifier identifier: Int64) -> UIViewController {
 		return DetailViewController(presenter: moviePresenter(identifier: identifier),
@@ -65,7 +74,7 @@ extension DetailAssembly: DetailViewControllerProvider {
 	}
 
 	func showViewController(withIdentifier identifier: Int64) -> UIViewController {
-		return DetailViewController(presenter: DummyDetailPresenter(),
+		return DetailViewController(presenter: showPresenter(identifier: identifier),
 									headerPresenter: detailHeaderPresenter(),
 									posterStripPresenter: posterStripPresenter())
 	}

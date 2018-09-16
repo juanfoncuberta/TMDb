@@ -36,18 +36,18 @@ final internal class WebService {
 	func load<T: Decodable>(_ type: T.Type, from endpoint: Endpoint) -> Observable<T> {
 		let decoder = self.decoder
 		let request = endpoint.request(with: baseURL, adding: configuration.parameters)
-
+       
 		return session.rx.data(request: request)
 			.map { try decoder.decode(T.self, from: $0) }
 			.catchError { error in
 				guard let webServiceError = error as? WebServiceError else {
-					throw error
+                    throw error
 				}
 
 				guard case let .badStatus(_, data) = webServiceError else {
 					throw error
 				}
-
+                
 				guard let status = try? decoder.decode(Status.self, from: data) else {
 					throw error
 				}

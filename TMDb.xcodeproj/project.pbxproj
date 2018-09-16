@@ -105,6 +105,10 @@
 		99F056501F8A5A0E00A680D8 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0564F1F8A5A0E00A680D8 /* MovieRepository.swift */; };
 		99F056521F8A5B4000A680D8 /* MoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F056511F8A5B4000A680D8 /* MoviePresenter.swift */; };
 		99F056541F8A5F9200A680D8 /* DetailHeader+MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F056531F8A5F9200A680D8 /* DetailHeader+MovieDetail.swift */; };
+		B072C298214DC12B00A7D928 /* DetailHeader+ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072C297214DC12B00A7D928 /* DetailHeader+ShowDetail.swift */; };
+		B0E60830214DA9AB00FF8FD1 /* ShowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6082F214DA9AB00FF8FD1 /* ShowPresenter.swift */; };
+		B0E60832214DAC0200FF8FD1 /* ShowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E60831214DAC0200FF8FD1 /* ShowRepository.swift */; };
+		B0E60834214DAC5E00FF8FD1 /* ShowDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E60833214DAC5E00FF8FD1 /* ShowDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +256,10 @@
 		99F0564F1F8A5A0E00A680D8 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		99F056511F8A5B4000A680D8 /* MoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePresenter.swift; sourceTree = "<group>"; };
 		99F056531F8A5F9200A680D8 /* DetailHeader+MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailHeader+MovieDetail.swift"; sourceTree = "<group>"; };
+		B072C297214DC12B00A7D928 /* DetailHeader+ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailHeader+ShowDetail.swift"; sourceTree = "<group>"; };
+		B0E6082F214DA9AB00FF8FD1 /* ShowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPresenter.swift; sourceTree = "<group>"; };
+		B0E60831214DAC0200FF8FD1 /* ShowRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRepository.swift; sourceTree = "<group>"; };
+		B0E60833214DAC5E00FF8FD1 /* ShowDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,10 +306,12 @@
 				99F0564A1F8A3DBF00A680D8 /* Credits.swift */,
 				99F0564C1F8A3E3100A680D8 /* MovieDetail.swift */,
 				99F056531F8A5F9200A680D8 /* DetailHeader+MovieDetail.swift */,
+				B072C297214DC12B00A7D928 /* DetailHeader+ShowDetail.swift */,
 				9923A74B1F8A664C00D3A6F7 /* PosterStripItem+CastMember.swift */,
 				9917CE762084A794007000D5 /* TaggedImage.swift */,
 				9917CE742084A77B007000D5 /* PersonDetail.swift */,
 				9917CE782084A7D7007000D5 /* DetailHeader+PersonDetail.swift */,
+				B0E60833214DAC5E00FF8FD1 /* ShowDetail.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -509,6 +519,7 @@
 				996EAFE01F8007070060FD98 /* DetailHeaderPresenter.swift */,
 				99F056511F8A5B4000A680D8 /* MoviePresenter.swift */,
 				9917CE7A2084A7F8007000D5 /* PersonPresenter.swift */,
+				B0E6082F214DA9AB00FF8FD1 /* ShowPresenter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -618,6 +629,7 @@
 			children = (
 				99F0564F1F8A5A0E00A680D8 /* MovieRepository.swift */,
 				9917CE7C2084A80C007000D5 /* PersonRepository.swift */,
+				B0E60831214DAC0200FF8FD1 /* ShowRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -851,6 +863,8 @@
 				998AD7D81F7FEEF800D3A222 /* MediaType.swift in Sources */,
 				99B9A34A1F74181A004F883E /* Configuration.swift in Sources */,
 				99A4653D1F7CE3B4007F3B5B /* PosterStripView.swift in Sources */,
+				B0E60832214DAC0200FF8FD1 /* ShowRepository.swift in Sources */,
+				B072C298214DC12B00A7D928 /* DetailHeader+ShowDetail.swift in Sources */,
 				993F1E801F7A9E2E004FE33B /* Person.swift in Sources */,
 				99B7FB8B1F88CDCC003CEF98 /* PushDetailNavigator.swift in Sources */,
 				99C5C91A1F7B92D00038688F /* Genre.swift in Sources */,
@@ -858,6 +872,7 @@
 				99A465311F7CD245007F3B5B /* DetailHeaderView.swift in Sources */,
 				997A44201F7AA4110094E928 /* UITableView+Reusable.swift in Sources */,
 				997A442A1F7AABD10094E928 /* ImageLoadingAssembly.swift in Sources */,
+				B0E60830214DA9AB00FF8FD1 /* ShowPresenter.swift in Sources */,
 				997A441E1F7AA4110094E928 /* NibLoadableView.swift in Sources */,
 				9917CE722084A3F9007000D5 /* KeyedDecodingContainer+Date.swift in Sources */,
 				99B7FB891F88CB4D003CEF98 /* DetailNavigator.swift in Sources */,
@@ -877,6 +892,7 @@
 				997A441F1F7AA4110094E928 /* ReusableView.swift in Sources */,
 				997A44281F7AAB350094E928 /* WebServiceAssembly.swift in Sources */,
 				9917CE792084A7D7007000D5 /* DetailHeader+PersonDetail.swift in Sources */,
+				B0E60834214DAC5E00FF8FD1 /* ShowDetail.swift in Sources */,
 				992D27BB1F7FFD5E00BA79DE /* DetailSection.swift in Sources */,
 				99B7FB931F894298003CEF98 /* Page.swift in Sources */,
 				99F056461F8A182200A680D8 /* FeaturedRepository.swift in Sources */,

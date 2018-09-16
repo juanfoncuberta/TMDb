@@ -33,7 +33,7 @@ final class CardPresenter {
 	func present(show: Show, in cardView: CardView) {
 		bindBackdrop(at: show.backdropPath, to: cardView)
 
-		cardView.titleLabel.text = show.title.uppercased()
+		cardView.titleLabel.text = show.name.uppercased()
 
 		let genre = show.genreIdentifiers.first.flatMap(Genre.name)
 		let year = (show.firstAirDate?.year).flatMap { String($0) }
